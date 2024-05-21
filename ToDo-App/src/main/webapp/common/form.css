@@ -1,0 +1,160 @@
+.animate-label {
+	position: relative;
+	margin-top: 25px; label { position : absolute;
+	bottom: 6px;
+	left: 0;
+	transition: .3s all ease;
+	font-size: 14px;
+	width: 100%;
+	color: #888888;
+}
+
+input:valid+label, input:focus+label {
+	bottom: 30px;
+	font-size: 10px;
+}
+
+input:focus+label {
+	color: #4285f4;
+}
+
+line:before {
+	content: '';
+	position: absolute;
+	background: #4285f4;
+	width: 0px;
+	height: 2px;
+	right: 50%;
+	bottom: 0;
+}
+
+input:focus ~ line:before {
+	width: 100%;
+	right: 0;
+	transition: all .3s ease;
+}
+
+}
+.wrapper {
+	width: 300px;
+	height: 320px;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+	position: fixed;
+	top: 53%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgba(360, 360, 360, .95);
+	padding: 40px;
+}
+
+label {
+	text-transform: capitalize;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 24px;
+	margin-bottom: 0;
+	line-height: 34px;
+}
+
+a {
+	color: #4285f4;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+input {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 6px;
+}
+
+input:focus {
+	outline: none;
+}
+
+input#password {
+	margin-top: 15px;
+}
+
+button {
+	display: block;
+	border-radius: 5px;
+	height: 40px;
+	width: 90px;
+	background-color: #4285f4;
+	border: none;
+	color: #ffffff;
+	text-align: center;
+	font-size: 14px;
+	box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.26);
+	cursor: pointer;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+}
+
+.margin-top {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.animate-dropdown {
+	position: relative;
+	margin-top: 30px;
+}
+
+.animate-dropdown select {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 6px;
+	font-size: 14px;
+	background-color: transparent;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	outline: none;
+}
+
+.animate-dropdown label {
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	transition: .3s all ease;
+	font-size: 14px;
+	width: 100%;
+	color: #888888;
+}
+
+.animate-dropdown select:focus+label, .animate-dropdown select:valid+label
+	{
+	bottom: 30px;
+	font-size: 10px;
+	color: #4285f4;
+}
+
+.animate-dropdown .line {
+	position: absolute;
+	background: #4285f4;
+	width: 0px;
+	height: 2px;
+	right: 50%;
+	bottom: 0;
+	transition: all .3s ease;
+}
+
+.animate-dropdown select:focus ~ .line, .animate-dropdown select:valid 
+	 ~ .line {
+	width: 100%;
+	right: 0;
+}

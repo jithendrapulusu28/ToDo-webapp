@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	version="4.0">
+	<display-name>Archetype Created Web Application</display-name>
+
+	<!-- Servlet Declarations -->
+	<servlet>
+		<servlet-name>UserRegister</servlet-name>
+		<servlet-class>com.servlet.UserRegister</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UserLogIn</servlet-name>
+		<servlet-class>com.servlet.UserLogin</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UserLogOut</servlet-name>
+		<servlet-class>com.servlet.UserLogout</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ForgotPassword</servlet-name>
+		<servlet-class>com.servlet.ForgotPassword</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ValidateOtp</servlet-name>
+		<servlet-class>com.servlet.ValidateOtp</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ResetPassword</servlet-name>
+		<servlet-class>com.servlet.ResetPassword</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddTodo</servlet-name>
+		<servlet-class>com.servlet.AddTodo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateTodo</servlet-name>
+		<servlet-class>com.servlet.UpdateTodo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DeleteTodo</servlet-name>
+		<servlet-class>com.servlet.DeleteTodo</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ChangePassword</servlet-name>
+		<servlet-class>com.servlet.ChangePassword</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UserRegistrationAuthentication</servlet-name>
+		<servlet-class>com.servlet.UserRegistrationAuthentication</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UploadProfilePictureServlet</servlet-name>
+		<servlet-class>com.servlet.UploadProfilePictureServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserRegister</servlet-name>
+		<url-pattern>/userRegister</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserLogIn</servlet-name>
+		<url-pattern>/userLogin</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserLogOut</servlet-name>
+		<url-pattern>/userLogout</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ForgotPassword</servlet-name>
+		<url-pattern>/forgotPassword</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ValidateOtp</servlet-name>
+		<url-pattern>/ValidateOtp</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ResetPassword</servlet-name>
+		<url-pattern>/resetPassword</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddTodo</servlet-name>
+		<url-pattern>/addTodo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateTodo</servlet-name>
+		<url-pattern>/updateTodo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DeleteTodo</servlet-name>
+		<url-pattern>/deleteTodo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChangePassword</servlet-name>
+		<url-pattern>/changePassword</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UserRegistrationAuthentication</servlet-name>
+		<url-pattern>/userRegistrationAuthenticate</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UploadProfilePictureServlet</servlet-name>
+		<url-pattern>/uploadProfilePictureServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Filter Declaration -->
+	<filter>
+		<filter-name>AuthenticationFilter</filter-name>
+		<filter-class>com.utils.AuthenticationFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>AuthenticationFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+
+
+	<!-- Welcome File List -->
+	<welcome-file-list>
+		<welcome-file>userLogIn.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
